@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>선택자 우선 순위</title>
+        <style>
+            p {color:blue;}
+            .gr {color:green;}
+            #ye {color:yellow;}
+            #bl {color:black;}
+        </style>
+    </head>
+    <body>
+        <p>태그(파랑)</p>
+        <p class="gr">클래스(초록)</p>
+        <p class="gr", id="ye">클래스(초록) & ID(노랑)</p>
+        <p class="gr", id="bl", style="color: red;">클래스(초록) & ID(검정) & 인라인(빨강)</p>
+    </body>
+</html>
