@@ -45,3 +45,21 @@ input:focus {
   background: #ffffff;
   border: 1px solid #00068c;
 }
+
+p {
+  position: absolute;
+  left: 470px;
+  top: 500px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #d1d1d1;
+}
+
+a {
+  position: absolute;
+  width: 58px;
+  height: 19px;
+  left: 1080px;
+  top: 516px;
+}
