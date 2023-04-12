@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>색입력</h3>
+    <hr />
+
+    <form action="">
+      <label for="">색상 선택 </label>
+      <input
+        type="color"
+        value="#00BFFF"
+        onchange="document.body.style.backgroundColor= this.value"
+      />
+      <input
+        type="color"
+        value="#FFFFFF"
+        onchange="document.body.style.color= this.value"
+      />
+    </form>
+  </body>
+</html>
