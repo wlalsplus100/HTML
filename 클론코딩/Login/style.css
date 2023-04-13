@@ -63,3 +63,26 @@ a {
   left: 1080px;
   top: 516px;
 }
+
+#login {
+  left: 442px;
+  top: 570px;
+  position: absolute;
+  width: 700px;
+  height: 88px;
+  background: #575de6;
+}
+
+#logintxt {
+  position: absolute;
+  left: 293px;
+  top: -15px;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+button {
+  border: none;
+}
