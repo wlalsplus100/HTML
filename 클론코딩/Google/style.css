@@ -1,6 +1,8 @@
 h1 {
-  text-align: center;
-  margin-top: 230px;
+  margin-top: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 90px;
 }
 
@@ -34,4 +36,23 @@ h1 span:nth-child(6) {
 
 .search-bar {
   width: 500px;
+}
+
+.header2 {
+  display: flex;
+  margin: 12px 86%;
+  width: 193px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header2 a img {
+  flex: 1;
+}
+
+header a {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
 }
