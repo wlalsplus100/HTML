@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+  background-image: url(https://www.tving.com/img/moweb-img-gradation-230413.png),
+    url(https://image.tving.com/ntgs/operation/onboard/2023/04/17/1681692446_1.jpg/dims/resize/F_jpg,2048);
+  background-position: bottom, bottom;
+  height: 95vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  width: 7.333rem;
+  height: 100%;
+  background-position: 0 50%;
+  font-size: 1rem;
+}
+
+section {
+  height: 95vh;
+  margin-top: 30vh;
+}
+
+p {
+  color: white;
+  margin: 0%;
+}
+
+button {
+  border: 0;
+  background-color: #ff1537;
+}
+
+.sale {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.25rem;
+}
+
+.date {
+  margin-top: 1rem;
+  font-size: 1.667rem;
+  text-align: center;
+  color: #a3a3a3;
+  line-height: 1.29;
+}
+
+.tving {
+  font-size: 1.5rem;
+  padding: 0 4.8rem 0 6.1rem;
+  height: 4.667rem;
+  display: flex;
+  justify-content: center;
+  margin: 3.333rem auto 0;
+}
+
+.tving::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4.667rem;
+  width: 35%;
+  height: 10%;
+  background: url(https://www.tving.com/img/img_tving-symbol.svg) no-repeat left
+    top;
+  background-size: contain;
+}
+
+b {
+  color: white;
+  display: flex;
+  align-items: center;
+}
