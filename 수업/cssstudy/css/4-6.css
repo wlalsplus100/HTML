@@ -1,0 +1,30 @@
+.main {
+  background-color: black;
+  color: white;
+}
+
+h3:first-letter {
+  color: red;
+}
+
+li:hover {
+  /* 마우스가 올라갔을 때 스타일 적용 */
+  background-color: darkblue;
+}
+
+h3,
+li {
+  color: wheat;
+}
+
+div > strong {
+  background: darkolivegreen;
+}
+
+ul strong {
+  color: yellow;
+}
+
+.warning {
+  color: red;
+}
