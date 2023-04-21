@@ -1,12 +1,16 @@
 body {
   background-color: black;
-  background-image: url(https://www.tving.com/img/moweb-img-gradation-230413.png),
-    url(https://image.tving.com/ntgs/operation/onboard/2023/04/17/1681692446_1.jpg/dims/resize/F_jpg,2048);
-  background-position: bottom, bottom;
-  height: 95vh;
+  height: 100%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat, no-repeat;
+}
+
+.scroll0 {
+  margin-top: 0%;
+  background-position: bottom, bottom;
+  background-image: url(https://www.tving.com/img/moweb-img-gradation-230413.png),
+    url(https://image.tving.com/ntgs/operation/onboard/2023/04/17/1681692446_1.jpg/dims/resize/F_jpg,2048);
 }
 
 h1 {
@@ -31,13 +35,19 @@ p {
 button {
   border: 0;
   background-color: #ff1537;
+  cursor: pointer;
 }
 
 .sale {
   text-align: center;
+}
+
+.sale p {
+  text-align: center;
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 45px;
   line-height: 4.25rem;
+  letter-spacing: -4px;
 }
 
 .date {
@@ -55,21 +65,66 @@ button {
   display: flex;
   justify-content: center;
   margin: 3.333rem auto 0;
+  border-radius: 9px;
 }
 
 .tving::before {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
-  height: 4.667rem;
-  width: 35%;
+  height: 5rem;
+  width: 30%;
   height: 10%;
   background: url(https://www.tving.com/img/img_tving-symbol.svg) no-repeat left
     top;
-  background-size: contain;
+  background-size: 13%;
+  margin-left: 30px;
 }
 
 b {
   color: white;
   align-self: center;
+}
+
+.text {
+  display: inline-block;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll p {
+  margin-bottom: 30px;
+}
+
+.scroll #a {
+  margin-top: 30px;
+  flex-basis: auto;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.scroll #b {
+  flex-basis: auto;
+  font-size: 26px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.scroll #c {
+  flex-basis: auto;
+  font-size: 20px;
+  color: #a3a3a3;
+  margin-bottom: 80px;
+}
+
+#content01 {
+  width: 50%;
+  height: 50%;
 }

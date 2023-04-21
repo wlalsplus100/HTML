@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TVING</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="js/jquery.1.12.4.js" type="text/javascript"></script>
+    <script
+      src="plugins/bxslider/js/jquery.bxslider.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider({
+          controls: false,
+          pager: false,
+          auto: true,
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -20,16 +34,27 @@
       </a>
     </header>
     <main>
-      <section>
+      <section class="scroll0">
         <div class="sale">
-          <p>&lt;방과 후 전쟁활동></p>
-          <p>역대급 신기록 달성 기념!</p>
-          <p>티빙 연간이용권 41% 할인 중</p>
+          <div class="text">
+            <p>&lt;방과 후 전쟁활동></p>
+            <p>역대급 신기록 달성 기념!</p>
+            <p>티빙 연간이용권 41% 할인 중</p>
+          </div>
         </div>
         <p class="date">04.17 - 04.23 단 7일</p>
         <button class="tving">
-          <b>"지금 바로, 티빙을 플레이 하세요!"</b>
+          <b>지금 바로, 티빙을 플레이 하세요!</b>
         </button>
+      </section>
+      <section class="scroll1">
+        <div class="scroll">
+          <p id="a">티빙에만 있는 재미</p>
+          <p id="b">오리지널 콘텐츠를 만나보세요!</p>
+          <p id="c">차별화된 웰메이드 오리지널 콘텐츠</p>
+          <img src="./aseest/content01.webp" alt="" id="content01">
+          </div>
+        </div>
       </section>
     </main>
   </body>
