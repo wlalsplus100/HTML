@@ -45,14 +45,14 @@ button {
 .sale p {
   text-align: center;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 2.5em;
   line-height: 4.25rem;
   letter-spacing: -4px;
 }
 
 .date {
   margin-top: 1rem;
-  font-size: 1.667rem;
+  font-size: 1.6rem;
   text-align: center;
   color: #a3a3a3;
   line-height: 1.29;
@@ -60,25 +60,24 @@ button {
 
 .tving {
   font-size: 1.5rem;
-  padding: 0 4.8rem 0 6.1rem;
+  padding: 0 4rem 0 6rem;
   height: 4.667rem;
   display: flex;
   justify-content: center;
   margin: 3.333rem auto 0;
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
 .tving::before {
   content: "";
   display: inline-block;
   position: absolute;
-  height: 5rem;
-  width: 30%;
+  width: 40%;
   height: 10%;
   background: url(https://www.tving.com/img/img_tving-symbol.svg) no-repeat left
     top;
   background-size: 13%;
-  margin-left: 30px;
+  margin-left: 5%;
 }
 
 b {
