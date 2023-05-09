@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+}
+
+.item {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.item:nth-child(odd) {
+  background: rgba(255, 255, 0, 0.5);
+}
+
+.container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 200px 1fr 1fr;
+  /* grid-gap: 1rem; */
+}
+
+.item:nth-child(9) {
+  /* grid-row: 3/5; */
+}
+
+h6 {
+  margin: 0;
+}
