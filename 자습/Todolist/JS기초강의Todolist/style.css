@@ -50,3 +50,7 @@ body {
 .input-area {
   margin-bottom: 3px;
 }
+
+.task-done {
+  text-decoration: line-through;
+}
