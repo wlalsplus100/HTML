@@ -28,13 +28,14 @@ body {
 }
 
 #under-line {
-  height: 4px;
   background-color: aquamarine;
   position: absolute;
-  width: 50px;
+  width: 52px;
   left: 0px;
-  top: 52px;
+  top: 54px;
+  height: 4px;
   padding: 0px;
+  transition: 0.5s;
 }
 
 .task {
@@ -53,4 +54,8 @@ body {
 
 .task-done {
   text-decoration: line-through;
+}
+
+.task-tabs div {
+  cursor: pointer;
 }
