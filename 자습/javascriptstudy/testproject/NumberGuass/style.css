@@ -58,7 +58,7 @@ body {
 
 #inputNumber::placeholder {
   font-size: 16px;
-  padding: 0;
+  line-height: 0;
 }
 
 /*input type="number"일 때 우측에 따는 화살표 제거*/
@@ -76,6 +76,8 @@ body {
   left: calc((100% - 39px) / 2);
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
+  border: none;
+  border-radius: 5px;
 }
 
 #playButton:hover {

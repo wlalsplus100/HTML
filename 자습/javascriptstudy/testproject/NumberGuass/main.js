@@ -10,6 +10,7 @@
 
 let playButton = document.querySelector("#playButton");
 let inputNumber = document.querySelector("#inputNumber");
+let result = document.querySelector("#result");
 
 let ComputerNum;
 
@@ -23,6 +24,7 @@ function pickRandomNumber() {
 function check() {
   userNumber = inputNumber.value;
   console.log(userNumber);
+  resutHTML = "";
   if (userNumber !== undefined) {
     if (userNumber == ComputerNum) {
       console.log("정답입니다");
