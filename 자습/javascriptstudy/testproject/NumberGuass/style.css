@@ -18,7 +18,7 @@ body {
 .container {
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   border-radius: 50px;
   left: 10%;
@@ -27,6 +27,8 @@ body {
   width: 80%;
   height: 80%;
   color: black;
+  min-width: 300px;
+  min-height: 400px;
 }
 
 #title {
@@ -57,8 +59,10 @@ body {
 }
 
 #inputNumber::placeholder {
+  position: relative;
   font-size: 16px;
   line-height: 0;
+  top: -5px;
 }
 
 /*input type="number"일 때 우측에 따는 화살표 제거*/
@@ -68,18 +72,36 @@ body {
   margin: 0;
 }
 
-#playButton {
+.Button {
   margin-top: 30px;
   position: relative;
   width: 3em;
   height: 3em;
-  left: calc((100% - 39px) / 2);
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
   border: none;
   border-radius: 5px;
+  margin: 15px;
 }
 
-#playButton:hover {
+.Button:hover {
   background-color: rgb(255, 0, 0);
+}
+
+.blue-background {
+  background-color: blue !important;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#chance {
+  position: absolute;
+  display: inline-block;
+  left: calc(50% - 93.19px / 2);
+  top: 3%;
+  color: red;
 }

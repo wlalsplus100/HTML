@@ -11,27 +11,50 @@
 let playButton = document.querySelector("#playButton");
 let inputNumber = document.querySelector("#inputNumber");
 let result = document.querySelector("#result");
-
 let ComputerNum;
+let chance = document.querySelector("#chance");
+let chanceNum = 5;
+let resetButton = document.querySelector("#reset-button");
+
+chance.innerText = `남은 기회 : ${chanceNum}`;
 
 pickRandomNumber();
 playButton.addEventListener("click", check);
+resetButton.addEventListener("reset", reset);
 
 function pickRandomNumber() {
   ComputerNum = Math.floor(Math.random() * 100) + 1;
   console.log("정답", ComputerNum);
 }
+
+function reset() {
+  chanceNum = 5;
+  pickRandomNumber();
+}
+
 function check() {
   userNumber = inputNumber.value;
+  setTimeout(() => {
+    playButton.classList.remove("blue-background");
+  }, 1000);
+  playButton.classList.add("blue-background");
   console.log(userNumber);
-  resutHTML = "";
-  if (userNumber !== undefined) {
-    if (userNumber == ComputerNum) {
-      console.log("정답입니다");
-    } else if (userNumber >= ComputerNum) {
-      console.log("Down");
-    } else if (userNumber <= ComputerNum) {
-      console.log("Up");
+  if (chanceNum > 0) {
+    if (userNumber !== undefined) {
+      chanceNum -= 1;
+      chance.innerText = `남은 기회 : ${chanceNum}`;
+      if (userNumber == ComputerNum) {
+        console.log("정답입니다");
+        result.innerHTML = `정답입니다`;
+      } else if (userNumber >= ComputerNum) {
+        console.log("Down");
+        result.innerHTML = `Down`;
+      } else if (userNumber <= ComputerNum) {
+        console.log("Up");
+        result.innerHTML = `Up`;
+      }
     }
+  } else {
+    result.innerText = `reset을 눌러 게임 재시작`;
   }
 }

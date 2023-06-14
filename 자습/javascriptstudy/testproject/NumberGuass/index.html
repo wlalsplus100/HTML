@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="container">
+      <span id="chance">남은 기회</span>
       <h1 id="title">숫자 맞추기 게임</h1>
       <div id="result">결과가 나온다</div>
       <input
@@ -16,7 +17,10 @@
         id="inputNumber"
         placeholder="1부터 100까지의 숫자 중 하나를 입력하세요"
       />
-      <button id="playButton">Go!</button>
+      <div class="button">
+        <button id="playButton" class="Button">Go!</button>
+        <button id="reset-button" class="Button">reset</button>
+      </div>
     </div>
 
     <script src="./main.js"></script>
