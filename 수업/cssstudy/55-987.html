@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: darkorchid;
+        position: relative;
+        animation: 2s move;
+        animation-iteration-count: 10;
+      }
+
+      #ball {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: 500ms bounce;
+        animation-iteration-count: infinite;
+        border-radius: 50%;
+      }
+      @keyframes move {
+        0% {
+          left: 0%;
+          top: 0%;
+        }
+        50% {
+          left: calc(100% - 100px);
+        }
+        100% {
+          left: 0%;
+        }
+      }
+      @keyframes bounce {
+        from,
+        to {
+          bottom: 0px;
+          animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: 200px;
+          animation-timing-function: ease-in;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <hr />
+    <div id="ball"></div>
+  </body>
+</html>
