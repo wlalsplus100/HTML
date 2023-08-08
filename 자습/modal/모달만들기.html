@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+      }
+
+      .modal {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+      }
+      .imgList {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+      }
+      .modal-open {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-img {
+      }
+      .close-button {
+        position: absolute;
+        margin: 10px -43px;
+      }
+      .flex-item {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="modal">
+        <div class="flex-item">
+          <img src="" alt="" class="modal-img" width="600px" />
+          <button class="close-button" onclick="modalClose()">닫기</button>
+        </div>
+      </div>
+      <div class="imgList">
+        <img
+          src="김톱날.png"
+          alt=""
+          class="img1"
+          onclick="modalOpen(document.querySelector('.img1'))"
+        />
+      </div>
+    </div>
+    <script src="test.js"></script>
+  </body>
+</html>
