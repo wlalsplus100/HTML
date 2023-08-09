@@ -31,37 +31,11 @@ const makeNote = (index) => {
       clear.style.display = "none";
       setTimeout(() => {
         miss.style.display = "none";
-        floatNote(note, line); // Float the note when miss touches the bottom
+        note.remove();
       }, 500);
     }
     note.remove();
   });
-
-  if (checkOverlap(note, checkline)) {
-    clearNote++;
-    clear.style.display = "inline-block";
-    const miss = document.querySelector("miss");
-    miss.style.display = "none";
-    setTimeout(() => {
-      clear.style.display = "none";
-    }, 500);
-    renderText();
-    note.classList.add("cleared");
-  }
-};
-
-const floatNote = (note, line) => {
-  const interval = setInterval(() => {
-    const noteRect = note.getBoundingClientRect();
-    const lineRect = line.getBoundingClientRect();
-
-    if (noteRect.bottom >= lineRect.bottom) {
-      clearInterval(interval);
-      note.remove();
-    } else {
-      note.style.top = `${noteRect.top + 1}px`;
-    }
-  }, 10);
 };
 
 const renderText = () => {
@@ -84,13 +58,9 @@ function checkOverlap(element1, element2) {
   ) {
     element1.remove();
     combos++;
+    return true;
   }
-  return (
-    rect1.left < rect2.right &&
-    rect1.right > rect2.left &&
-    rect1.top < rect2.bottom + 30 &&
-    rect1.bottom > rect2.top - 30
-  );
+  return false;
 }
 
 const Retry = () => {
