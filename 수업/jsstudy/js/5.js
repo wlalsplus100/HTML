@@ -29,3 +29,35 @@ console.log(string);
 let id = "길동";
 let greetings = "반갑습니다";
 console.log(`홎${id}님 ${greetings}`);
+console.log("askl;df;klafkjl;");
+console.clear();
+let t = true;
+let f = false;
+
+console.log(t);
+console.log(f);
+console.clear();
+let isFree = t;
+console.log(!!1);
+console.log(!!-1);
+console.log(!!"asdf");
+console.log(!!{});
+console.log(!!Infinity);
+
+console.log(!!0);
+console.log(!!null);
+console.clear();
+
+let apple = {};
+console.log(apple);
+console.log(typeof apple);
+let orange = { name: "오렌지", color: "orange" };
+console.log(orange);
+console.log(typeof orange);
+
+let num1 = "20";
+let num2 = 10;
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
