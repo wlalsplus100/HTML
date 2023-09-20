@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>학점 계산</h3>
+    <hr />
+    <script>
+      let userNumber = prompt("숫자 입력");
+      console.log(userNumber);
+      if (userNumber !== null) {
+        userNumber = parseInt(userNumber);
+        if (userNumber % 3 == 0) {
+          alert("3의 배수 입니다.");
+        } else {
+          alert("3의 배수가 아닙니다.");
+        }
+      } else {
+        alert("입력이 취소");
+      }
+    </script>
+  </body>
+</html>
