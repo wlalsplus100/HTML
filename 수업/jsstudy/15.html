@@ -6,14 +6,17 @@
     <title>Document</title>
   </head>
   <body>
+    <h3>타이머 함수</h3>
+    <hr />
     <script>
-      let sum = 0;
-      for (let i = 1; i <= 10; i++) {
-        if (i % 2 === 0) continue;
-        document.write(i + " ");
-        sum += i;
-      }
-      document.write("합은 " + sum);
+      let cnt = 0;
+      let timer = setInterval(() => {
+        console.log("안녕하세요?");
+        cnt++;
+        if (cnt == 5) {
+          clearInterval(timer);
+        }
+      }, 3000);
     </script>
   </body>
 </html>

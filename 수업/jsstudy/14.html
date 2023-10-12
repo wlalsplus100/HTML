@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>콜백함수</h3>
+    <hr />
+    <button id="a">클릭</button> <br />
+    <button id="b">클릭2</button>
+    <script>
+      const btn = document.querySelector("#a");
+      const btn2 = document.querySelector("#b");
+      console.log(btn);
+      console.log(typeof btn);
+      const display = () => {
+        alert("클릭했습니다");
+      };
+
+      const display2 = () => {
+        alert("클릭햇습니다");
+      };
+      btn.addEventListener("click", () => {
+        alert("처리1");
+      });
+      btn2.addEventListener("click", () => alert("처리2"));
+    </script>
+  </body>
+</html>
