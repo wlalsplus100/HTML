@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <ul>
+      <li class="check">할 일 1</li>
+      <li class="check">할 일 2</li>
+      <li class="check">할 일 3</li>
+      <li class="check">할 일 4</li>
+      <li class="check">할 일 5</li>
+    </ul>
+    <script>
+      const lis = document.querySelectorAll(".check");
+      console.log(lis);
+      lis.forEach((el) => {
+        console.log(el);
+        el.addEventListener("click", (e) => {
+          e.target.style.color = e.target.style.color === "" ? "#ccc" : "";
+          e.target.style.textDecoration =
+            e.target.style.textDecoration == "" ? "line-through" : "";
+        });
+      });
+    </script>
+  </body>
+</html>

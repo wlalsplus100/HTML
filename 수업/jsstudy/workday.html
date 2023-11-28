@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>운동한 날</h3>
+    <br />
+    <p><span id="result">60</span>일 연속 달성 (만남)</p>
+    <script>
+      const result = document.getElementById("result");
+      console.log(result);
+      result.innerText = "30";
+      const firstDay = new Date("2023-11-01");
+      const today = new Date();
+      console.log(firstDay.getTime());
+      console.log(today.getTime());
+      let passedTime = today.getTime() - firstDay.getTime();
+      let passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+      console.log(passedDay);
+      result.innerText = passedDay;
+
+      const displayTime = document.querySelector("#clock");
+      let clock = () => {
+        let current = new Date();
+        let hrs = current.getHours();
+        let mins = current.getMinutes();
+        let secs = current.getSeconds();
+        let period = "AM";
+      };
+    </script>
+  </body>
+</html>

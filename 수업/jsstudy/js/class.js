@@ -155,15 +155,105 @@
 
 // ===================================================
 
-class Counter {
-  #count;
-  constructor(count) {
-    this.#count = count;
-  }
+// class Counter {
+//   #value;
+//   constructor(startValue) {
+//     if (isNaN(startValue) || startValue < 0) {
+//       this.#value = 0;
+//     } else {
+//       this.#value = startValue;
+//     }
+//   }
 
-  get getCount() {
-    return this.#count;
+//   get value() {
+//     return this.#value;
+//   }
+
+//   increment = () => {
+//     this.#value += 1;
+//   };
+// }
+
+// const counter = new Counter();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// console.log(counter.value);
+
+// ==================================================================
+
+// class Animal {
+//   constructor(color) {
+//     this.color = color;
+//   }
+//   eat() {
+//     console.log("먹는다");
+//   }
+//   sleep() {
+//     console.log("잠을 잔다");
+//   }
+// }
+
+// class Tiger extends Animal {}
+
+// class Dog extends Animal {
+//   constructor(color, ownerName) {
+//     super(color);
+//     this.ownerName = ownerName;
+//   }
+//   play = () => {
+//     console.log("신나게 놀자");
+//   };
+//   eat = () => {
+//     super.eat();
+//     console.log("강아지가 먹는다");
+//   };
+// }
+
+// const tiger = new Tiger("노랑");
+// console.log(tiger);
+// tiger.sleep();
+// tiger.eat();
+
+// const dog = new Dog("하양", "홍길동");
+// console.log(dog);
+// dog.sleep();
+// dog.eat();
+// dog.play();
+
+// ====================================
+
+class Employ {
+  constructor(name, department, hoursPerMonth, payRate) {
+    this.name = name;
+    this.department = department;
+    this.hoursPerMonth = hoursPerMonth;
+    this.payRate = payRate;
+  }
+  calc = () => {
+    return this.hoursPerMonth * this.payRate;
+  };
+}
+
+class FullTime extends Employ {
+  static PAY_RATE = 10000;
+  constructor(name, department, hoursPerMonth) {
+    super(name, department, hoursPerMonth, FullTime.PAY_RATE);
   }
 }
 
-const counter = new Counter();
+class PartTime extends Employ {
+  static PAY_RATE = 9500;
+  constructor(name, department, hoursPerMonth) {
+    super(name, department, hoursPerMonth, PartTime.PAY_RATE);
+  }
+}
+
+const hong = new FullTime("홍", "S/W", 30);
+const kim = new FullTime("김", "S/W", 10);
+const bob = new PartTime("밥", "S/W", 20);
+
+console.log(hong.calc());
+console.log(kim.calc());
+console.log(bob.calc());

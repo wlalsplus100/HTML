@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>현재 시각 <span id="current" class="display"></span></p>
+    <script>
+      setInterval(displayNow, 1000);
+      function displayNow() {
+        const a = new Date();
+        const b = a.toLocaleTimeString();
+        document.querySelector("#current").innerHTML = `${b}`;
+      }
+    </script>
+  </body>
+</html>

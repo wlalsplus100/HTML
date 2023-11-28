@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>현재 시간 보기</h1>
+    <script>
+      function openCenter(doc, win, w, h) {
+        const left = (screen.availWidth - w) / 2;
+        const top = (screen.availHeight - h) / 2;
+        const opt = `left=${left},top=${top},width=${w},height=${h}`;
+        window.open(doc, win, opt);
+      }
+
+      openCenter("./prac5.html", "pop", 500, 400);
+    </script>
+  </body>
+</html>

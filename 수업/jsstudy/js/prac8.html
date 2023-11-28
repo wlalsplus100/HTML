@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="row" />
+    행
+    <input type="text" id="col" />
+    열
+    <button id="sub">작성</button>
+    <table border="1"></table>
+    <script>
+      const table = document.querySelector("table");
+      const rowInput = document.querySelector("#row");
+      const colInput = document.querySelector("#col");
+      const subButton = document.querySelector("#sub");
+      subButton.addEventListener("click", (e) => {
+        const row = parseInt(rowInput.value);
+        const col = parseInt(colInput.value);
+        console.log(row, col);
+        for (let i = 0; i < row; i++) {
+          const tr = document.createElement("tr");
+          for (let j = 0; j < col; j++) {
+            const td = document.createElement("td");
+            td.innerText = `(${j}, ${i})`;
+            tr.appendChild(td);
+          }
+          table.appendChild(tr);
+        }
+      });
+    </script>
+  </body>
+</html>
